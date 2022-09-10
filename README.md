@@ -1,5 +1,17 @@
 # Ember Technical Assessment
 
+## Decisions made
+
+London city and metric units are chosen for this exercise. Adding a new location is quite easy as the open weather api accepts a `q` parameter that can be a city, county etc.
+
+### Other potential improvements
+
+- As the potential number of component grows, [Storybook](https://storybook.js.org/) could be used to develop components in isolation. This can be further integrated with [Percy](https://percy.io/) to provide testing.
+- Cache could be moved to an external Database like Redis/Mongo/Postgres
+- Calling the api route from server side props is discouraged [here](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props#getserversideprops-or-api-routes), so we can just fetch the weather data directly from the root server side generation.
+- Depending on the team code style, styled components and types could be moved to separate modules.
+- Some types are missing definitions and could be finished later on.
+
 ## Current Setup
 
 This repository has been setup with an almost blank Next.JS project using
